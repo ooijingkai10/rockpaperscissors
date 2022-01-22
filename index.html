@@ -4,61 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script src='script.js' defer></script>
+  <title>ROCK PAPER SCISSORS</title>
+  <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
-  <script>
-    const choice = ["rock", "paper", "scissors"];
-    
-    function computerPlay() {
-      return choice[Math.floor(Math.random() * 3)];
-    }
-
-    function playRound(playerSelection,computerSelection) {
-      if (playerSelection.toLowerCase() == "paper") {
-          if (computerSelection == "rock") {
-            return "You win! Paper beats rock!";
-          } else if (computerSelection == "scissors") {
-            return "You lose! Scissors beats rock!"
-          } else {
-            return "tie";
-          }
-      } else if (playerSelection.toLowerCase() == "rock") {
-        if (computerSelection == "scissors") {
-            return `You win! ${playerSelection.toLowerCase()} beats ${computerSelection}!`;
-          } else if (computerSelection == "paper") {
-            return `You lose! ${computerSelection} beats ${playerSelection.toLowerCase()}!`;
-          } else {
-            return "tie";
-          }
-      } else if (playerSelection.toLowerCase() == "scissors") {
-        if (computerSelection == "paper") {
-            return `You win! ${playerSelection.toLowerCase()} beats ${computerSelection}!`;
-          } else if (computerSelection == "rock") {
-            return `You lose! ${computerSelection} beats ${playerSelection.toLowerCase()}!`;
-          } else {
-            return "tie";
-          }
-      }
-    }
-
-    let count = 0;
-    let computerScore = 0;
-    let playerScore = 0;
-
-    function game() {
-      while(count < 5) {
-        const playerSelection = prompt("Choice your move");
-        const computerSelection = computerPlay();
-        alert(playRound(playerSelection, computerSelection));
-        console.log(playRound(playerSelection, computerSelection));
-        count++;
-      }
-    }
-
-    game();
-    
-  </script>
-  
+  <div class='header'>
+    <h1 class='title'>ROCK PAPER SCISSORS</h1>
+  </div>
+  <div>
+    <h2 class='second title'>YOU VS COMPUTER</h2>
+  </div>
+  <div class='scoreboard title'> 
+    <h3 id='humanscore'>0</h3>
+    <h3> - </h3>
+    <h3 id='computerscore'>0</h3>
+  </div>
+  <div class='buttons'>
+    <button class='button-sq' id='rock'>✊🏽</button>
+    <button class='button-sq' id='paper'>🤚🏻</button>
+    <button class='button-sq' id='scissors'>✌🏻</button>
+  </div>
+  <div class='result title'>
+    <h3 id='roundmsg'></h3>
+  </div>
 </body>
 </html>
