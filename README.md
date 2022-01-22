@@ -1,5 +1,5 @@
 # rockpaperscissors
 
-#This is my second project on TOP
+This is my second project on TOP
 
-#link to site: 
+Link to site: https://ooijingkai10.github.io/rockpaperscissors/
