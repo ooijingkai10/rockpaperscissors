@@ -55,7 +55,10 @@ function handleClick(playerSelection) {
   roundmsg.textContent = playRound(playerSelection, computerselect);
   compscore.textContent = `${computerScore}`;
   humanscore.textContent = `${playerScore}`;
-
+  if(computerScore == 5 || playerScore == 5) {
+    const gamemsg = document.getElementById('gamemsg');
+    gamemsg.textContent = (computerScore == 5) ? "computer wins!" : "player wins!";
+  }
 }
 
 //update//
